@@ -22,6 +22,8 @@ namespace Enzo_ADADO_calcul
     {
         // variablesint no1 = 0;
 
+        
+        int no1 = 0;
         int no2 = 0;
 
         int result = 0;
@@ -129,48 +131,74 @@ namespace Enzo_ADADO_calcul
 
         }
 
+     
+
 
         public void BTN_Plus_Click(object sender, RoutedEventArgs e)
-
         {
-
-            TB_Display.Text += "+";
-
+            no1 = int.Parse(TB_Display.Text);
+            opp = '+';
+            TB_Display.Text = "";
         }
-
 
         public void BTN_moin_Click(object sender, RoutedEventArgs e)
-
         {
-
-            TB_Display.Text += "-";
-
+            no1 = int.Parse(TB_Display.Text);
+            opp = '-';
+            TB_Display.Text = "";
         }
+
 
 
         public void BTN_fois_Click(object sender, RoutedEventArgs e)
-
         {
-
-            TB_Display.Text += "*";
-
+            no1 = int.Parse(TB_Display.Text);
+            opp = '*';
+            TB_Display.Text = "";
         }
-
 
         public void BTN_div_Click(object sender, RoutedEventArgs e)
-
         {
-
-            TB_Display.Text += "/";
-
+            no1 = int.Parse(TB_Display.Text);
+            opp = '/';
+            TB_Display.Text = "";
         }
+
 
 
         public void BTN_egale_Click(object sender, RoutedEventArgs e)
 
         {
+            no2 = int.Parse(TB_Display.Text);
 
-            TB_Display.Text += "=";
+
+            if( opp == '+')
+            {
+                result = no1 + no2;
+                TB_Display.Text = result.ToString();
+            }
+            else if (opp == '-')
+            {
+                result = no1 - no2;
+                TB_Display.Text = result.ToString();
+            }
+            else if (opp == '*')
+            {
+                result = no1 * no2;
+                TB_Display.Text = result.ToString();
+            }
+            else if (opp == '/')
+            {
+                if (no2 != 0)
+                {
+                    result = no1 / no2;
+                    TB_Display.Text = result.ToString();
+                }
+                else
+                {
+                    TB_Display.Text = "Error: Division by zero";
+                }
+            }
 
         }
 
@@ -183,53 +211,6 @@ namespace Enzo_ADADO_calcul
 
         }
 
-
-        private void BTN_2_Click_1(object sender, RoutedEventArgs e)
-
-        {
-
-
-        }
-
-
-        private void BTN_3_Click_1(object sender, RoutedEventArgs e)
-
-        {
-
-
-        }
-
-
-        private void BTN_4_Click_1(object sender, RoutedEventArgs e)
-
-        {
-
-
-        }
-
-
-        private void BTN_Plus_Click_1(object sender, RoutedEventArgs e)
-
-        {
-
-
-        }
-
-
-        private void BTN_5_Click_1(object sender, RoutedEventArgs e)
-
-        {
-
-
-        }
-
-
-        private void BTN_6_Click_1(object sender, RoutedEventArgs e)
-
-        {
-
-
-        }
 
         private void display_num(string picknum)
         {
@@ -244,6 +225,10 @@ namespace Enzo_ADADO_calcul
 
         }
 
+        private void BTN_virgule_Click(object sender, RoutedEventArgs e)
+        {
+            display_num(",");
+        }
     }
 }
 

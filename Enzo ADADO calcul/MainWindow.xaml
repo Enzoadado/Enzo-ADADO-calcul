@@ -50,14 +50,27 @@
         <Button Grid.Row="2" Grid.Column="0" Name="BTN_4" Content="4" Click="BTN_4_Click" />
         <Button Grid.Row="2" Grid.Column="1" Name="BTN_5" Content="5" Click="BTN_5_Click" />
         <Button Grid.Row="2" Grid.Column="2" Name="BTN_6" Content="6" Click="BTN_6_Click" />
-        <Button Grid.Row="2" Grid.Column="3" Name="BTN_moin" Style="{StaticResource Mystyle }" Content="-"/>
+        <Button Grid.Row="2" Grid.Column="3" Name="BTN_moin" Style="{StaticResource Mystyle }" Content="-" Click="BTN_moin_Click"/>
         <Button Grid.Row="3" Grid.Column="0" Name="BTN_7" Content="7" Click="BTN_7_Click" />
         <Button Grid.Row="3" Grid.Column="1" Name="BTN_8" Content="8" Click="BTN_8_Click" />
         <Button Grid.Row="3" Grid.Column="2" Name="BTN_9" Content="9" Click="BTN_9_Click" />
-        <Button Grid.Row="3" Grid.Column="3" Name="BTN_fois" Style="{StaticResource Mystyle }" Content="*"/>
+        <Button Grid.Row="3" Grid.Column="3" Name="BTN_fois" Style="{StaticResource Mystyle }" Content="*" Click="BTN_fois_Click"/>
         <Button Grid.Row="4" Grid.Column="0" Name="BTN_0"  Content="0" Click="BTN_0_Click" />
         <Button Grid.Row="4" Grid.Column="1" Name="BTN_CLR" Style="{StaticResource Mystyle }" Content="CLR" Click="BTN_CLR_Click" />
         <Button Grid.Row="4" Grid.Column="2" Name="BTN_egale" Style="{StaticResource Mystyle }" Content="=" Click="BTN_egale_Click" />
-        <Button Grid.Row="4" Grid.Column="3" Name="BTN_div" Style="{StaticResource Mystyle }" Content="/"/>
+
+        <Grid  Grid.Row="4" Grid.Column="3" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+               
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Name="BTN_div" Style="{StaticResource Mystyle }" Content="/" Click="BTN_div_Click" />
+            <Button Grid.Column="1" Name="BTN_virgule" Style="{StaticResource Mystyle }" Content="," Click="BTN_virgule_Click" />
+        </Grid>
+        
+     
+        
     </Grid>
 </Window>
